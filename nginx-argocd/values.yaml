@@ -1,0 +1,11 @@
+image:
+  repository: nginx
+  tag: "1.25.2"
+  pullPolicy: IfNotPresent
+
+service:
+  port: 80
+
+ingress:
+  enabled: true
+  host: nginx.135.237.119.83.nip.io    # nginx.yourdomain.com  # Change this
