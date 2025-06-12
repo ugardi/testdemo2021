@@ -16,14 +16,15 @@ service:
 ingress:
   enabled: true
   className: "nginx"
-  annotations: "nginx.ingress.kubernetes.io/rewrite-target"        = "/"
-      "nginx.ingress.kubernetes.io/ssl-redirect"          = "false"
-      "nginx.ingress.kubernetes.io/force-ssl-redirect"    = "false"
-      "nginx.ingress.kubernetes.io/backend-protocol"      = "HTTP"
-      "nginx.ingress.kubernetes.io/proxy-read-timeout"    = "600"
-      "nginx.ingress.kubernetes.io/proxy-send-timeout"    = "600"
+  annotations: 
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
   hosts:
-    - host: external-ui.${var.ingress_ip}.nip.io
+    - host: external-ui.135.237.119.83.nip.io
       paths:
         - path: /
           pathType: Prefix
