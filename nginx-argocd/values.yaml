@@ -1,6 +1,6 @@
 image:
   repository: ugardi/external-ui
-  tag: "1.25.2"
+  #tag: "1.25.2"
   pullPolicy: IfNotPresent
 
 service:
