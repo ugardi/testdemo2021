@@ -1,5 +1,5 @@
 image:
-  repository: nginx
+  repository: ugardi/external-ui
   tag: "1.25.2"
   pullPolicy: IfNotPresent
 
