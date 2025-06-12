@@ -15,7 +15,7 @@ service:
 
 ingress:
   enabled: true
-  className: ""
+  className: "nginx"
   annotations: 
     nginx.ingress.kubernetes.io/rewrite-target: "/"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
@@ -38,12 +38,12 @@ resources:
     memory: 256Mi
 
 env:
-  APP_CONFIG_RUNTIME_URL: "http://runtime.135.237.119.83.nip.io"
-  APP_CONFIG_PUBLIC_API_KEY: "dummy-public-api-key"
-  APP_CONFIG_BOTAPI_URL: "http://chat.135.237.119.83.nip.io"
-  APP_CONFIG_API_URL: "http://gateway.135.237.119.83.nip.io"
-  APP_CONFIG_USERAPI_URL: "http://user.135.237.119.83.nip.io"
-  APP_CONFIG_RESERVATIONAPI_URL: "http://reservation.135.237.119.83.nip.io/reservation"
-  APP_CONFIG_INVENTORYAPI_URL: "http://inventory.135.237.119.83.nip.io/inventory"
-  APP_CONFIG_KEYCLOAK_URL: "http://keycloak.135.237.119.83.nip.io/auth/realms/abcaops"
-  APP_CONFIG_KEYCLOAK_CLIENT_ID: "external-ui"
+  #APP_CONFIG_RUNTIME_URL: "http://runtime.135.237.119.83.nip.io"
+  #APP_CONFIG_PUBLIC_API_KEY: "dummy-public-api-key"
+  #APP_CONFIG_BOTAPI_URL: "http://chat.135.237.119.83.nip.io"
+  #APP_CONFIG_API_URL: "http://gateway.135.237.119.83.nip.io"
+  #APP_CONFIG_USERAPI_URL: "http://user.135.237.119.83.nip.io"
+  #APP_CONFIG_RESERVATIONAPI_URL: "http://reservation.135.237.119.83.nip.io/reservation"
+  #APP_CONFIG_INVENTORYAPI_URL: "http://inventory.135.237.119.83.nip.io/inventory"
+  #APP_CONFIG_KEYCLOAK_URL: "http://keycloak.135.237.119.83.nip.io/auth/realms/abcaops"
+  #APP_CONFIG_KEYCLOAK_CLIENT_ID: "external-ui"
