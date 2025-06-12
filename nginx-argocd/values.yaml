@@ -1,6 +1,6 @@
 image:
   repository: nginx
-  #tag: "1.25.2"
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
