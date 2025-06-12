@@ -1,0 +1,48 @@
+replicaCount: 1
+
+image:
+  repository: 300359003805.dkr.ecr.us-east-1.amazonaws.com/reservation
+  tag: latest
+  pullPolicy: Always
+
+
+nameOverride: ""
+fullnameOverride: "reservation-app"
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  className: "alb"
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    
+    
+  hosts:
+    - host: reservation.135.237.119.83.nip.io
+      paths:
+        - path: /
+          pathType: Prefix
+    - host: reservation-management.135.237.119.83.nip.io
+      paths:
+        - path: /
+          pathType: Prefix
+
+resources:
+  limits:
+    cpu: 1
+    memory: 1Gi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+config:
+  enabled: false
