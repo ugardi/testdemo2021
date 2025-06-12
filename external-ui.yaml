@@ -10,7 +10,7 @@ spec:
   source:
     #repoURL: git@github.com:ABC-Labs/ABCOps_INFRA.git
     repoURL: git@github.com:ugardi/testdemo2021.git
-    #path: aws/helm/environments/dev/applications/external-uiabc
+    path: external
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
