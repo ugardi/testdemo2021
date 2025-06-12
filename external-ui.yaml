@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-ui
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    #repoURL: git@github.com:ABC-Labs/ABCOps_INFRA.git
+    repoURL: git@github.com:ugardi/testdemo2021.git
+    #path: aws/helm/environments/dev/applications/external-uiabc
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: applications-ns
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
+      - PrunePropagationPolicy=foreground
