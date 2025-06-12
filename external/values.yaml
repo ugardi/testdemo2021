@@ -45,5 +45,5 @@ env:
   APP_CONFIG_USERAPI_URL: "http://user.135.237.119.83.nip.io"
   APP_CONFIG_RESERVATIONAPI_URL: "http://reservation.135.237.119.83.nip.io/reservation"
   APP_CONFIG_INVENTORYAPI_URL: "http://inventory.135.237.119.83.nip.io/inventory"
-  APP_CONFIG_KEYCLOAK_URL: "http://keycloak.135.237.119.83.nip.io/auth/realms/vistaops"
+  APP_CONFIG_KEYCLOAK_URL: "http://keycloak.135.237.119.83.nip.io/auth/realms/abcaops"
   APP_CONFIG_KEYCLOAK_CLIENT_ID: "external-ui"
